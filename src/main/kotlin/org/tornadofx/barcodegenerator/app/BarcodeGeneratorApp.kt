@@ -1,5 +1,6 @@
 package org.tornadofx.barcodegenerator.app
 
+import javafx.scene.image.Image
 import javafx.stage.Stage
 import org.tornadofx.barcodegenerator.view.MainView
 import tornadofx.*
@@ -13,5 +14,7 @@ class BarcodeGeneratorApp : App(MainView::class) {
 
         stage.minWidth = 450.0
         stage.minHeight = 800.0
+
+        stage.icons.add(Image("icon.png"))
     }
 }

@@ -3,6 +3,8 @@ package org.tornadofx.barcodegenerator.model.data
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
+import org.tornadofx.barcodegenerator.model.data.enums.BarcodeType
+import org.tornadofx.barcodegenerator.model.data.enums.FileType
 import org.tornadofx.barcodegenerator.model.fxadapter.ConfigurationViewModel
 import java.io.File
 

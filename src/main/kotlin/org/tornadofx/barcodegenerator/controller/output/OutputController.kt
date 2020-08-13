@@ -10,10 +10,10 @@ import org.krysalis.barcode4j.impl.code128.EAN128Bean
 import org.krysalis.barcode4j.impl.upcean.EAN13Bean
 import org.krysalis.barcode4j.impl.upcean.EAN8Bean
 import org.krysalis.barcode4j.output.java2d.Java2DCanvasProvider
-import org.tornadofx.barcodegenerator.model.data.BarcodeType
 import org.tornadofx.barcodegenerator.model.data.Configuration
-import org.tornadofx.barcodegenerator.model.data.FileType
+import org.tornadofx.barcodegenerator.model.data.enums.FileType
 import org.tornadofx.barcodegenerator.model.data.Label
+import org.tornadofx.barcodegenerator.model.data.enums.BarcodeType
 import tornadofx.*
 import java.awt.Color
 import java.awt.Graphics2D
