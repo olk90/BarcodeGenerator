@@ -1,8 +1,10 @@
 package org.tornadofx.barcodegenerator.view
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon
 import org.tornadofx.barcodegenerator.controller.LabelController
 import org.tornadofx.barcodegenerator.model.data.Label
 import org.tornadofx.barcodegenerator.model.fxadapter.LabelViewModel
+import org.tornadofx.barcodegenerator.view.extensions.icon
 import tornadofx.*
 
 
@@ -23,22 +25,30 @@ class AddLabelDialog : Fragment() {
 
             field("Barcode") {
                 textfield(model.barcodeProperty)
-                button("Random Barcode") {
+                button {
+                    tooltip("Generate random barcode")
+                    addClass("icon-only")
+                    graphic = icon(FontAwesomeIcon.RANDOM)
                     action {
-                        // TODO implement random barcode generation depending on preset format
+                        information("Not yet implemented")
                     }
                 }
             }
         }
 
-        button("Add") {
-            shortcut(enter)
-            action {
-                controller.createLabel(model)
-                close()
-            }
+        buttonbar {
+            button {
+                tooltip("Add label [$enter]")
+                addClass("icon-only")
+                graphic = icon(FontAwesomeIcon.PLUS)
+                shortcut(enter)
+                action {
+                    controller.createLabel(model)
+                    close()
+                }
 
-            disableWhen(model.barcodeProperty.isBlank())
+                disableWhen(model.barcodeProperty.isBlank())
+            }
         }
     }
 
