@@ -1,6 +1,5 @@
 package org.tornadofx.barcodegenerator.view
 
-import javafx.beans.property.SimpleBooleanProperty
 import javafx.geometry.Pos
 import javafx.scene.control.ContextMenu
 import javafx.scene.control.SelectionMode
@@ -13,7 +12,6 @@ import tornadofx.*
 class BarcodeTableView : View() {
 
     private val labelController: LabelController by inject()
-    val emptyProperty = SimpleBooleanProperty()
 
     override val root = tableview(labelController.labels) {
 
@@ -30,7 +28,7 @@ class BarcodeTableView : View() {
             pctWidth(40)
         }
 
-        emptyProperty.set(true)
+        labelController.emptyProperty.set(true)
 
         // column width should depend on both, the cell content and the window's dimensions
         columnResizePolicy =  SmartResize.POLICY
@@ -57,14 +55,14 @@ class BarcodeTableView : View() {
 
     private fun newLabel() {
         openInternalWindow(AddLabelDialog::class)
-        emptyProperty.set(false)
+        labelController.emptyProperty.set(false)
     }
 
     private fun TableView<Label>.deleteSelected() {
         selectedItem?.let { labelController.labels.remove(it) }
         // disable controls again, if the last item was deleted
         if (labelController.labels.isEmpty())
-            emptyProperty.set(true)
+            labelController.emptyProperty.set(true)
 
     }
 

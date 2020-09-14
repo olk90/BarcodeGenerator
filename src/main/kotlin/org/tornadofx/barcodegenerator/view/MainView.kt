@@ -4,6 +4,7 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon
 import javafx.beans.property.SimpleObjectProperty
 import javafx.scene.control.ContextMenu
 import javafx.stage.FileChooser
+import org.tornadofx.barcodegenerator.controller.InputController
 import org.tornadofx.barcodegenerator.controller.LabelController
 import org.tornadofx.barcodegenerator.controller.output.OutputController
 import org.tornadofx.barcodegenerator.model.data.Configuration
@@ -19,6 +20,7 @@ class MainView : View("Barcode Generator") {
 
     private val tableView: BarcodeTableView by inject()
     private val labelController: LabelController by inject()
+    private val inputController: InputController by inject()
 
     private val outputProperty = SimpleObjectProperty<String>()
     private var outputPath by outputProperty
@@ -79,8 +81,9 @@ class MainView : View("Barcode Generator") {
                                         filters = arrayOf(FileChooser.ExtensionFilter("CSV file", "*.csv"))) {
                                     initialDirectory = userHome
                                 }
-
-                                inputPath = directory.toString()
+                                val csv = directory.first()
+                                inputPath = csv.absolutePath
+                                inputController.readCsvFile(csv)
                             }
                         }
                     }
@@ -110,9 +113,11 @@ class MainView : View("Barcode Generator") {
                                     initialDirectory = userHome
                                 }
 
-                                outputPath = directory.toString()
-                                println("Set new output path: $outputPath")
-                                model.outputPathProperty.setValue(outputPath)
+                                if (directory != null) {
+                                    outputPath = directory.absolutePath
+                                    println("Set new output path: $outputPath")
+                                    model.outputPathProperty.setValue(outputPath)
+                                }
                             }
                         }
                     }
@@ -130,7 +135,7 @@ class MainView : View("Barcode Generator") {
                         controller.writeBarcodesToImage(labelController.labels)
                     }
                     shortcut(generate)
-                    disableWhen(tableView.emptyProperty)
+                    disableWhen(labelController.emptyProperty)
                 }
                 button {
                     tooltip("Clear input [$clearInput]")
@@ -138,10 +143,10 @@ class MainView : View("Barcode Generator") {
                     graphic = icon(FontAwesomeIcon.ERASER)
                     action {
                         labelController.labels.clear()
-                        tableView.emptyProperty.set(true)
+                        labelController.emptyProperty.set(true)
                     }
                     shortcut(clearInput)
-                    disableWhen(tableView.emptyProperty)
+                    disableWhen(labelController.emptyProperty)
                 }
             }
         }
