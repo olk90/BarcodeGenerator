@@ -19,6 +19,12 @@ The table contents can be imported via CSV file. The files must consist of two
 columns, one for the name and one for the numerical barcode. Valid seperators are
 `,` and `;`.
 
+## Install
+
+Download the latest release and unzip it. Navigate to the `bin` directory and execute
+either the shell script `BarcodeGenerator` (for Linux and Mac users) or the 
+`BarcodeGenerator.bat` (Windows users).
+
 ## Upcoming Features
 
 - Barcode generation pane with support for multiple formats
