@@ -3,7 +3,6 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
 }
 
-apply plugin: "kotlin"
 apply plugin: 'application'
 mainClassName = 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
 
@@ -36,13 +35,14 @@ dependencies {
 
 }
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
-        )
-    }
+task fatJar(type: Jar) {
+    manifest { attributes 'Main-Class': 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp' }
+    from {
+        configurations.compile.collect
+                { it.isDirectory() ? it : zipTree(it) }
+    } with jar
 }
+
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
