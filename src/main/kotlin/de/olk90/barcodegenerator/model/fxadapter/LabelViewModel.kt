@@ -1,6 +1,6 @@
-package org.tornadofx.barcodegenerator.model.fxadapter
+package de.olk90.barcodegenerator.model.fxadapter
 
-import org.tornadofx.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.model.data.Label
 import tornadofx.*
 
 

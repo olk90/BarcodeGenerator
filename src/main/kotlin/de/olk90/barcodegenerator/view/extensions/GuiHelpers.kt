@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.view.extensions
+package de.olk90.barcodegenerator.view.extensions
 
 import de.jensd.fx.glyphs.GlyphIcon
 import de.jensd.fx.glyphs.GlyphIcons

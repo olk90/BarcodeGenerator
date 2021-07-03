@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.controller.output
+package de.olk90.barcodegenerator.controller.output
 
 import javafx.scene.control.ButtonType
 import org.apache.poi.xwpf.usermodel.XWPFDocument
@@ -10,10 +10,10 @@ import org.krysalis.barcode4j.impl.code128.EAN128Bean
 import org.krysalis.barcode4j.impl.upcean.EAN13Bean
 import org.krysalis.barcode4j.impl.upcean.EAN8Bean
 import org.krysalis.barcode4j.output.java2d.Java2DCanvasProvider
-import org.tornadofx.barcodegenerator.model.data.Configuration
-import org.tornadofx.barcodegenerator.model.data.enums.FileType
-import org.tornadofx.barcodegenerator.model.data.Label
-import org.tornadofx.barcodegenerator.model.data.enums.BarcodeType
+import de.olk90.barcodegenerator.model.data.Configuration
+import de.olk90.barcodegenerator.model.data.enums.FileType
+import de.olk90.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.model.data.enums.BarcodeType
 import tornadofx.*
 import java.awt.Color
 import java.awt.Graphics2D

@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.controller
+package de.olk90.barcodegenerator.controller
 
 
 class DuplicateEntryException(identifier: String) : Exception() {

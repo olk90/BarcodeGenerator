@@ -1,8 +1,8 @@
-package org.tornadofx.barcodegenerator.app
+package de.olk90.barcodegenerator.app
 
 import javafx.scene.image.Image
 import javafx.stage.Stage
-import org.tornadofx.barcodegenerator.view.MainView
+import de.olk90.barcodegenerator.view.MainView
 import tornadofx.*
 
 class BarcodeGeneratorApp : App(MainView::class) {

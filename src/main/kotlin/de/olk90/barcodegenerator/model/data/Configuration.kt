@@ -1,11 +1,11 @@
-package org.tornadofx.barcodegenerator.model.data
+package de.olk90.barcodegenerator.model.data
 
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
-import org.tornadofx.barcodegenerator.model.data.enums.BarcodeType
-import org.tornadofx.barcodegenerator.model.data.enums.FileType
-import org.tornadofx.barcodegenerator.model.fxadapter.ConfigurationViewModel
+import de.olk90.barcodegenerator.model.data.enums.BarcodeType
+import de.olk90.barcodegenerator.model.data.enums.FileType
+import de.olk90.barcodegenerator.model.fxadapter.ConfigurationViewModel
 import java.io.File
 
 /**

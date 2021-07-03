@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.controller.output
+package de.olk90.barcodegenerator.controller.output
 
 import com.sun.media.sound.InvalidFormatException
 import org.apache.poi.util.Units

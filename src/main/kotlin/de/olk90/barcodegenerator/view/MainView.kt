@@ -1,16 +1,16 @@
-package org.tornadofx.barcodegenerator.view
+package de.olk90.barcodegenerator.view
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon
 import javafx.beans.property.SimpleObjectProperty
 import javafx.scene.control.ContextMenu
 import javafx.stage.FileChooser
-import org.tornadofx.barcodegenerator.controller.InputController
-import org.tornadofx.barcodegenerator.controller.LabelController
-import org.tornadofx.barcodegenerator.controller.output.OutputController
-import org.tornadofx.barcodegenerator.model.data.Configuration
-import org.tornadofx.barcodegenerator.model.data.enums.BarcodeType
-import org.tornadofx.barcodegenerator.model.data.enums.FileType
-import org.tornadofx.barcodegenerator.view.extensions.icon
+import de.olk90.barcodegenerator.controller.InputController
+import de.olk90.barcodegenerator.controller.LabelController
+import de.olk90.barcodegenerator.controller.output.OutputController
+import de.olk90.barcodegenerator.model.data.Configuration
+import de.olk90.barcodegenerator.model.data.enums.BarcodeType
+import de.olk90.barcodegenerator.model.data.enums.FileType
+import de.olk90.barcodegenerator.view.extensions.icon
 import tornadofx.*
 import java.io.File
 

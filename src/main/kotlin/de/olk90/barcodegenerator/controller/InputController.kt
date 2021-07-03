@@ -1,6 +1,6 @@
-package org.tornadofx.barcodegenerator.controller
+package de.olk90.barcodegenerator.controller
 
-import org.tornadofx.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.model.data.Label
 import tornadofx.*
 import java.io.File
 

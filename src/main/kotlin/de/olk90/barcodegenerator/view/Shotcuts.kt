@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.view
+package de.olk90.barcodegenerator.view
 
 import javafx.scene.input.KeyCombination
 

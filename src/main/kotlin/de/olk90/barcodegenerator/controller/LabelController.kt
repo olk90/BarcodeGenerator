@@ -1,8 +1,8 @@
-package org.tornadofx.barcodegenerator.controller
+package de.olk90.barcodegenerator.controller
 
 import javafx.beans.property.SimpleBooleanProperty
-import org.tornadofx.barcodegenerator.model.data.Label
-import org.tornadofx.barcodegenerator.model.fxadapter.LabelViewModel
+import de.olk90.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.model.fxadapter.LabelViewModel
 import tornadofx.*
 
 

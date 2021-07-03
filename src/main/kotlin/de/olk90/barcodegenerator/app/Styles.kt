@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.app
+package de.olk90.barcodegenerator.app
 
 import javafx.scene.text.FontWeight
 import tornadofx.*

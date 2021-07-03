@@ -1,12 +1,12 @@
-package org.tornadofx.barcodegenerator.view
+package de.olk90.barcodegenerator.view
 
 import javafx.geometry.Pos
 import javafx.scene.control.ContextMenu
 import javafx.scene.control.SelectionMode
 import javafx.scene.control.TableView
-import org.tornadofx.barcodegenerator.controller.LabelController
-import org.tornadofx.barcodegenerator.model.data.Label
-import org.tornadofx.barcodegenerator.view.extensions.align
+import de.olk90.barcodegenerator.controller.LabelController
+import de.olk90.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.view.extensions.align
 import tornadofx.*
 
 class BarcodeTableView : View() {

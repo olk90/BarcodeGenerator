@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.model.data
+package de.olk90.barcodegenerator.model.data
 
 import javafx.beans.property.SimpleStringProperty
 

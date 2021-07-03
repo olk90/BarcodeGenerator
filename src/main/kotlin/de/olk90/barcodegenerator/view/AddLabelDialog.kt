@@ -1,10 +1,10 @@
-package org.tornadofx.barcodegenerator.view
+package de.olk90.barcodegenerator.view
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon
-import org.tornadofx.barcodegenerator.controller.LabelController
-import org.tornadofx.barcodegenerator.model.data.Label
-import org.tornadofx.barcodegenerator.model.fxadapter.LabelViewModel
-import org.tornadofx.barcodegenerator.view.extensions.icon
+import de.olk90.barcodegenerator.controller.LabelController
+import de.olk90.barcodegenerator.model.data.Label
+import de.olk90.barcodegenerator.model.fxadapter.LabelViewModel
+import de.olk90.barcodegenerator.view.extensions.icon
 import tornadofx.*
 
 

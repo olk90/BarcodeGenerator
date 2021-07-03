@@ -1,4 +1,4 @@
-package org.tornadofx.barcodegenerator.model.data.enums
+package de.olk90.barcodegenerator.model.data.enums
 
 enum class BarcodeType(var type: String) {
 
