@@ -23,7 +23,8 @@ columns, one for the name and one for the numerical barcode. Valid seperators ar
 
 Download the latest release and unzip it. Navigate to the `bin` directory and execute
 either the shell script `BarcodeGenerator` (for Linux and Mac users) or the 
-`BarcodeGenerator.bat` (Windows users).
+`BarcodeGenerator.bat` (Windows users). Alternatively you can run the jar file on
+Linux, Mac and Windows via command line: `java -jar BarcodeGenerator<version>.jar`.
 
 ## Upcoming Features
 
