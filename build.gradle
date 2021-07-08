@@ -1,16 +1,19 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'application'
+    id 'edu.sc.seis.launch4j' version '2.4.9'
 }
 
-apply plugin: 'application'
-mainClassName = 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
-
 group 'de.olk90'
-version '0.1.1'
+version '0.1.1-beta2'
 
 repositories {
     mavenCentral()
+}
+
+application {
+    mainClassName = 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
 }
 
 test {
@@ -47,6 +50,11 @@ task fatJar(type: Jar) {
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+launch4j {
+    mainClassName = 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
 }
