@@ -55,6 +55,6 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-launch4j {
+createExe {
     mainClassName = 'de.olk90.barcodegenerator.app.BarcodeGeneratorApp'
 }
